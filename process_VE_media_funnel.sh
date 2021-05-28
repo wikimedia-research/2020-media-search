@@ -9,5 +9,5 @@ cd $SE_PATH
   echo "Running daily processing of VE Media Search funnel"
   $PYTHON_HOME/jupyter nbconvert --ExecutePreprocessor.timeout=1800 \
        --to html --execute T259308_VE_media_funnel_processing.ipynb
-  hdfs dfs -chmod -R o+r /user/hive/warehouse/nettrom_sd.db/ve_media_funnel_aggregates
+  hdfs dfs -chmod -R o+rx /user/hive/warehouse/nettrom_sd.db/ve_media_funnel_aggregates
 } >> $SE_PATH/VE_media_funnel_process.log 2>&1
